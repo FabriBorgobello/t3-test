@@ -20,6 +20,22 @@ model Example {
     updatedAt DateTime @updatedAt
 }
 
+model Product {
+    id           String   @id @default(cuid())
+    createdAt    DateTime @default(now())
+    updatedAt    DateTime @updatedAt
+    name         String
+    price        Int
+    quantity     Int
+    image        String
+    description  String
+    category     String
+    brand        String
+    rating       Float
+    numReviews   Int
+    countInStock Int
+}
+
 // Necessary for Next auth
 model Account {
     id                String  @id @default(cuid())
